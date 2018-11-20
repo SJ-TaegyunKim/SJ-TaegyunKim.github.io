@@ -1,0 +1,20 @@
+language: ruby
+cache: bundler
+
+install:
+  # Install Jekyll and dependencies
+  - bundle install
+
+script:
+  - bundle exec rake site:deploy --quiet
+branches:
+  only:
+    # Change this to gh-pages if you're deploying using the gh-pages branch
+    - master
+rvm:
+ - 2.4.2
+
+env:
+  global:
+    secure: "FECjsQ4lKQqCHavJusWNfl93eDZsHVfCPS/kyTcdI0ZUolcp0oP1LXTvM1eOJgN+LQk2akLkPa15SvR6EVaYyF3yUmo2gBMbXLaEowG5/jvh+0qxiSinwxBaISiDwwmmIGQ/Q36z9r0C5Nsea9RsSxyk1QMoNtUPeJh3vgVwsNYSFqmfPWgqxWgNahGLZYjCglBQ6aYbnacNrempb+h1zMzreW4iw24ayLGcPBhNCy+L1KdG+dEolZo3Kor16Exthqhv5lIn8BpAPTabepxANHCNyQQKE0n+IpeMol58kLG5Dvo9nSCx0F/nQGSN0qyv2uiFCmlnH+H+JWmCmvCu0NoZSJO7GBb6yYpYkQFyL40eY9Oq8APE5IjK4Qj/G/7YEuAGixBV24XGijFETJnygbbP3XwyH67evvExYSQCQBcwTXo7xvTMFzBmnTZamZXI5oGUSDMC7rnQKC5jT8CqToMjQiev8JIjvxg7TvjK4gGBIpF6zVhzNTfJ9vZdgxKdTOQxnGj+5zJBXMp24w80nGQquBScrKqSBkWp/9p8sGUF8yjAHuZYjLE8Suztrnc+bWuiu+yZtiQx1u8ZLlFl52GdLeD3+S0TVn5UDTZQ7Oil07By4WG4LNaeZtE5EDLjN0I7hG8ydQsa7s22Ava3up8+2Yveji2rqD2b+hv83Es="
+    
